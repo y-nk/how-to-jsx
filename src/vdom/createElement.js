@@ -14,5 +14,10 @@ export function createElement(tag, attrs = {}, ...children) {
       .forEach(attr => delete attrs[attr])
   }
 
-  return { tag, attrs, children };
+  return Object.assign(
+    Object.create(null), {
+    tag,
+    attrs,
+    children
+  });
 }
