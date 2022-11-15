@@ -6,7 +6,12 @@ export function createElement(tag, attrs = {}, ...children) {
   if (attrs) {
     for (const [name, value] of Object.entries(attrs)) {
       if (ignoreAttrs.includes(name)) continue;
-      el.setAttribute(name, value?.toString() ?? name);
+
+      if (name.startsWith("on") && name.toLowerCase() in window) {
+        el.addEventListener(name.toLowerCase().substring(2), value);
+      } else {
+        el.setAttribute(name, value?.toString() ?? name);
+      }
     }
   }
 
