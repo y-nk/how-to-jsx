@@ -1,3 +1,17 @@
 body {
   font-family: sans-serif;
 }
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.doing {
+  animation: blink 1s step-start infinite;
+}
+
+.done {
+  text-decoration: line-through;
+}

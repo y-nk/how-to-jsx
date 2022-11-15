@@ -3,6 +3,15 @@ import { createElement } from "./createElement";
 
 const handleClick = () => alert('somebody clicked!')
 
+const todo = [
+  { label: 'implement children', state: 'done' },
+  { label: 'implement attributes', state: 'done' },
+  { label: 'implement event handlers', state: 'done' },
+  { label: 'implement iteration', state: 'doing' },
+  { label: 'implement custom components', state: 'todo' },
+  { label: 'implement fragments', state: 'todo' },
+];
+
 export default (
   <main>
     <h1 onClick={handleClick}>Hello from dom!</h1>
@@ -13,6 +22,11 @@ export default (
         here
       </a>
       .
+
+      <h2>Todo list</h2>
+      <ul>
+        {todo.map(({ label, state }) => (<li class={state}>{label}</li>))}
+      </ul>
     </div>
   </main>
 );
