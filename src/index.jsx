@@ -1,3 +1,4 @@
 import "./styles.css"
 
-document.querySelector('#app').innerHTML = 'hello world!'
+const page = <div>hello world</div>
+document.querySelector('#app').appendChild(page)
