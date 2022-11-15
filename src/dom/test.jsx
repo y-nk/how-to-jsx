@@ -29,6 +29,7 @@ export default (
         here
       </a>
       .
+      Some random number: {133.7}
 
       <h2>Todo list</h2>
       <ul>
