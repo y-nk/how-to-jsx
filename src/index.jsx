@@ -4,4 +4,7 @@ import { createElement } from "./dom/createElement";
 import "./styles.css"
 
 const page = <div>hello world</div>
-document.querySelector('#app').appendChild(page)
+
+// mount
+const app = document.querySelector('#app')
+app.replaceChild(page, app.firstChild)
