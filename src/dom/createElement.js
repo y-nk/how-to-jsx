@@ -26,8 +26,8 @@ export function createElement(tag, attrs = {}, ...children) {
   }
 
   children.flat().forEach(child => {
-    if (typeof child === 'string') {
-      child = document.createTextNode(child)
+    if (typeof child === 'string' || child.nodeType === undefined) {
+      child = document.createTextNode(child.toString())
     }
 
     el.appendChild(child)
