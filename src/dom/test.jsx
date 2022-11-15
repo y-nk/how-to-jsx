@@ -1,9 +1,11 @@
 /** @jsx createElement */
 import { createElement } from "./createElement";
 
+const handleClick = () => alert('somebody clicked!')
+
 export default (
   <main>
-    <h1>Hello from dom!</h1>
+    <h1 onClick={handleClick}>Hello from dom!</h1>
     <div>
       We use the same configuration as Parcel to bundle this sandbox, you can
       find more info about Parcel
