@@ -1,7 +1,10 @@
+/** @jsx createElement */
+import { createElement } from "./dom/createElement";
+
 import "./styles.css"
 
-import page from './dom/test'
+import Page from './dom/test'
 
 // mount
 const app = document.querySelector('#app')
-app.replaceChild(page, app.firstChild)
+app.replaceChild(<Page />, app.firstChild)

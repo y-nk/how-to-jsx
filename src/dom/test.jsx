@@ -19,26 +19,28 @@ const Button = ({ name, onClick, children }) => (
   </button>
 );
 
-export default (
-  <>
-    <h1>Hello from dom!</h1>
-    <div>
-      We use the same configuration as Parcel to bundle this sandbox, you can
-      find more info about Parcel
-      <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">
-        here
-      </a>
-      .
-      Some random number: {133.7}
+export default function Page() {
+  return (
+    <>
+      <h1>Hello from dom!</h1>
+      <div>
+        We use the same configuration as Parcel to bundle this sandbox, you can
+        find more info about Parcel
+        <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">
+          here
+        </a>
+        .
+        Some random number: {133.7}
 
-      <h2>Todo list</h2>
-      <ul>
-        {todo.map(({ label, state }) => (<li class={state}>{label}</li>))}
-      </ul>
+        <h2>Todo list</h2>
+        <ul>
+          {todo.map(({ label, state }) => (<li class={state}>{label}</li>))}
+        </ul>
 
-      <Button name="im a button" onClick={handleClick}>
-        click me!
-      </Button>
-    </div>
-  </>
-);
+        <Button name="im a button" onClick={handleClick}>
+          click me!
+        </Button>
+      </div>
+    </>
+  )
+};
