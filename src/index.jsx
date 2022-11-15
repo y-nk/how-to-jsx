@@ -3,8 +3,12 @@ import { createElement } from "./dom/createElement";
 
 import "./styles.css"
 
-import Page from './dom/test'
+import DomPage from './dom/test'
+import VDomPage from './vdom/test'
 
 // mount
 const app = document.querySelector('#app')
-app.replaceChild(<Page />, app.firstChild)
+app.innerHTML = ''
+
+app.appendChild(<DomPage />)
+app.appendChild(<VDomPage />)
