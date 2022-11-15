@@ -19,7 +19,7 @@ const Button = ({ name, onClick, children }) => (
 );
 
 export default (
-  <main>
+  <>
     <h1>Hello from dom!</h1>
     <div>
       We use the same configuration as Parcel to bundle this sandbox, you can
@@ -38,5 +38,5 @@ export default (
         click me!
       </Button>
     </div>
-  </main>
+  </>
 );
