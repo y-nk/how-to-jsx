@@ -11,4 +11,8 @@ const app = document.querySelector('#app')
 app.innerHTML = ''
 
 app.appendChild(<DomPage />)
-app.appendChild(<VDomPage />)
+app.appendChild(
+  <pre>
+    <VDomPage />
+  </pre>
+)
