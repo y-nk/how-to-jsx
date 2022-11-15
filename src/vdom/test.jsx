@@ -1,6 +1,7 @@
 /** @jsx createElement */
 /** @jsxFrag FRAGMENT */
 import { createElement, FRAGMENT } from "./createElement";
+import { render } from "./render";
 
 const handleClick = () => alert('somebody clicked!')
 
@@ -20,7 +21,7 @@ const Button = ({ name, onClick, children }) => (
 );
 
 export default function Page() {
-  return (
+  return render(
     <>
       <h1>Hello from vdom!</h1>
       <div>
