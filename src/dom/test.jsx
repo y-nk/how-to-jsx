@@ -7,14 +7,20 @@ const todo = [
   { label: 'implement children', state: 'done' },
   { label: 'implement attributes', state: 'done' },
   { label: 'implement event handlers', state: 'done' },
-  { label: 'implement iteration', state: 'doing' },
-  { label: 'implement custom components', state: 'todo' },
+  { label: 'implement iteration', state: 'done' },
+  { label: 'implement custom components', state: 'doing' },
   { label: 'implement fragments', state: 'todo' },
 ];
 
+const Button = ({ name, onClick, children }) => (
+  <button title={name} onClick={onClick}>
+    {children}
+  </button>
+);
+
 export default (
   <main>
-    <h1 onClick={handleClick}>Hello from dom!</h1>
+    <h1>Hello from dom!</h1>
     <div>
       We use the same configuration as Parcel to bundle this sandbox, you can
       find more info about Parcel
@@ -27,6 +33,10 @@ export default (
       <ul>
         {todo.map(({ label, state }) => (<li class={state}>{label}</li>))}
       </ul>
+
+      <Button name="im a button" onClick={handleClick}>
+        click me!
+      </Button>
     </div>
   </main>
 );
