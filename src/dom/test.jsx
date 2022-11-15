@@ -1,5 +1,6 @@
 /** @jsx createElement */
-import { createElement } from "./createElement";
+/** @jsxFrag FRAGMENT */
+import { createElement, FRAGMENT } from "./createElement";
 
 const handleClick = () => alert('somebody clicked!')
 

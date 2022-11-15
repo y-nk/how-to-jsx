@@ -1,5 +1,7 @@
 const ignoreAttrs = ['__self', '__source']
 
+export const FRAGMENT = "__domFragment__";
+
 export function createElement(tag, attrs = {}, ...children) {
   if (typeof tag === "function") {
     return tag({ ...attrs, children });
