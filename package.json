@@ -1,0 +1,14 @@
+{
+  "name": "how-to-jsx",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.8.0"
+  }
+}
