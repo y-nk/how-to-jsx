@@ -7,7 +7,11 @@ export function createElement(tag, attrs = {}, ...children) {
     return tag({ ...attrs, children });
   }
 
-  const el = document.createElement(tag)
+  const el = (
+    tag === FRAGMENT
+      ? document.createDocumentFragment()
+      : document.createElement(tag)
+  )
 
   if (attrs) {
     for (const [name, value] of Object.entries(attrs)) {

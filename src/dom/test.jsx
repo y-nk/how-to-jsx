@@ -9,8 +9,8 @@ const todo = [
   { label: 'implement attributes', state: 'done' },
   { label: 'implement event handlers', state: 'done' },
   { label: 'implement iteration', state: 'done' },
-  { label: 'implement custom components', state: 'doing' },
-  { label: 'implement fragments', state: 'todo' },
+  { label: 'implement custom components', state: 'done' },
+  { label: 'implement fragments', state: 'done' },
 ];
 
 const Button = ({ name, onClick, children }) => (
