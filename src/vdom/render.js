@@ -1,4 +1,7 @@
-export function render(vnode) {
-  console.log(vnode)
-  return JSON.stringify(vnode)
+export function render({ tag, attrs = {}, children = [] }) {
+  return JSON.stringify({
+    tag,
+    attrs,
+    children,
+  }, null, 2)
 }

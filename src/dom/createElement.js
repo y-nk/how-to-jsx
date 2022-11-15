@@ -4,7 +4,11 @@ export const FRAGMENT = "__domFragment__";
 
 export function createElement(tag, attrs = {}, ...children) {
   if (typeof tag === "function") {
-    return tag({ ...attrs, children });
+    const rendered = tag({ ...attrs, children });
+
+    return (typeof rendered === 'string' || rendered.nodeType === undefined)
+      ? document.createTextNode(rendered.toString())
+      : rendered
   }
 
   const el = (
